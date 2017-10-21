@@ -1,5 +1,6 @@
-class S {
+import Drawing from './script/Drawing.js'
 
+class S {
 	constructor(name, color) {
 		this.name = name;
 		this.color = color;
@@ -7,7 +8,10 @@ class S {
 
 	toString(){
 		document.querySelector("#root").innerHTML = 'name:' + this.name + ',color:' + this.color
-		console.log(this.prop)
+	}
+
+	test(){
+		Drawing.toArr()
 	}
 }
 
