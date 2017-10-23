@@ -1,17 +1,12 @@
 import Drawing from './script/Drawing.js'
 
 class S {
-	constructor(name, color) {
-		this.name = name;
-		this.color = color;
-	}
+	constructor(el) {
+		let action = window.location.href
+		let i = action.indexOf('?a=')
 
-	toString(){
-		document.querySelector("#root").innerHTML = 'name:' + this.name + ',color:' + this.color
-	}
+		Drawing.init(el)
 
-	test(){
-		Drawing.toArr()
 	}
 }
 

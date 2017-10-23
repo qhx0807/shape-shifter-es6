@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 module.exports = {
 	devtool: 'eval-source-map',
@@ -15,7 +14,7 @@ module.exports = {
   		contentBase: "./public",
   		historyApiFallback: true,
   		inline: true,
-  		port: 7777,
+  		port: 8089,
   	},
 
   	module:{
@@ -34,14 +33,7 @@ module.exports = {
             			loader: 'style-loader'
             		}, {
             			loader: 'css-loader'
-            		}, {
-            			loader: 'less-loader',
-            			options: {
-                            modules: true
-                        }
-            		}, {
-                    	loader: "postcss-loader"
-                    }
+            		}
             	]
             }
   		]
@@ -50,6 +42,5 @@ module.exports = {
   	plugins: [
         new webpack.BannerPlugin('<qhx 820240134@qq.com>'),
         new webpack.optimize.UglifyJsPlugin(),
-        //new ExtractTextPlugin("style.css")
     ],
 }
